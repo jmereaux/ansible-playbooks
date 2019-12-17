@@ -3,5 +3,5 @@
   tasks:
     - name: Creates directory
       file:
-        path: /home/vagrant/awx/demo
+        path: /tmp/awx/demo
         state: directory
