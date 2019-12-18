@@ -1,12 +1,16 @@
 - hosts: all
   name: POC Carrefour
   tasks:
-    - name: Create dummy directory
+    - name: Create dummy directory 1
       file:
-        path: "{{directory_name}}"
+        path: "{{directory_name_1}}"
+        state: directory
+    - name: Create dummy directory 2
+      file:
+        path: "{{directory_name_2}}"
         state: directory
     - name: Create dummy file in directory
       file:
-        path: "{{directory_name}}/{{file_name}}"
+        path: "{{directory_name_1}}/{{file_name}}"
         state: touch
         mode: u=rw,g=r,o=r
